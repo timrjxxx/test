@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 
-    @GetMapping(value = "/api/v1")
+    @GetMapping(value = "/api")
     public ResponseEntity<String> back(){
         String s ="TEST";
         return ResponseEntity.ok(s);
