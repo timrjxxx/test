@@ -50,7 +50,8 @@ pipeline{
         }
         stage('Deploy'){
              steps {
-                   deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:8082')], contextPath: null, war: 'C:/ProgramData/Jenkins/.jenkins/workspace/test/target/*.war'
+                   deploy adapters: [tomcat9(credentialsId: 'tomcat', path: '', url: 'http://localhost:8082')], contextPath: null, war: ' **/war-test-0.0.1-SNAPSHOT.war.war''
+
 
              }
         }
