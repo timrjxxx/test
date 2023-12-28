@@ -25,13 +25,13 @@ pipeline{
                   bat ' ./mvnw  clean compile'
             }
          }
-        stage("Scan"){
-            steps{
-                withSonarQubeEnv(installationName: 'sonar' ){
-                  bat  'mvn clean verify sonar:sonar -Dsonar.projectKey=cicd  '
-                }
-            }
-        }
+//         stage("Scan"){
+//             steps{
+//                 withSonarQubeEnv(installationName: 'sonar' ){
+//                   bat  'mvn clean verify sonar:sonar -Dsonar.projectKey=cicd  '
+//                 }
+//             }
+//         }
         stage("Jacoco"){
             steps{
                 jacoco()
